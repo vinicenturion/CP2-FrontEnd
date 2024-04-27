@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastelaria do seu Zé</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+           /* Estilos adicionais podem ser incluídos aqui */
+        .navbar {
+            height: 80px; /* Define a altura da barra de navegação */
+        }
+
+        .navbar-brand img {
+            max-height: 150px; /* Define a altura máxima da imagem */
+            width: auto; /* Permite que a largura da imagem se ajuste automaticamente */
+             /* Adiciona margem superior negativa para compensar o aumento da altura */
+        
+        }
+        .carousel-item img {
+            max-width: 100%; /* Define a largura máxima das imagens */
+            max-height: 700px; /* Define a altura máxima das imagens */
+            margin: auto; /* Centraliza as imagens horizontalmente */
+}
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <a class="navbar-brand m-top -10" href="#"><img src="images/logo.png" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#destaque">Destaque</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#cardapio">Cardápio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#sobre">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+  <div id="carouselExampleIndicators" class="carousel slide m-auto" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="images/carne-destaque.png" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Queridinho do Zé</h5>
+                <p>Pastel de Carne</p>
+            </div>
+        </div>
+        <div class="carousel-item" >
+            <img class="d-block w-100" src="images/new-destaque-frango.png" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Queridinho do Zé</h5>
+                <p>Pastel de Frango</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="images/pernil-destaque.png" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Queridinho do Zé</h5>
+                <p>Pastel de Pernil</p>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Próximo</span>
+    </a>
+</div>
+<section id="cardapio" class="py-5" style= "background-color: rgb(54, 54, 54);">
+    <div class="container">
+        <h2 class="text-center mb-4" style=" color: azure;">Cardápio</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card" style= "background-color: #eff157;">
+                    <img src="images/cardapio-calabresa.avif" class="card-img-top" alt="Pastel 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Pastel de Calabresa</h5>
+                        <p class="card-text">Delicioso pastel recheado com Calabresa.</p>
+                        <button type="button" class="btn btn-danger" data-toggle="modal"
+                            data-target="#modalPastel1">Ver Mais</button>
+                        <p class="card-price mt-3">R$ 20,00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modalPastel1" tabindex="-1" role="dialog"
+                aria-labelledby="modalPastel1Label" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalPastel1Label"></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Ingredientes: Calabresa picada, cebola, temperos especiais.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" >
+                <div class="card" style= "background-color: #eff157;;">
+                    <img src="images/cardapio-frango.avif" class="card-img-top" alt="Pastel 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Pastel de Frango</h5>
+                        <p class="card-text">Delicioso pastel recheado com Frango.</p>
+                        <button type="button" class="btn btn-danger" data-toggle="modal"
+                            data-target="#modalPastel2">Ver Mais</button>
+                        <p class="card-price mt-3">R$ 20,00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modalPastel2" tabindex="-1" role="dialog"
+                aria-labelledby="modalPastel2Label" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalPastel2Label">Pastel de Frango</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Ingredientes: Frango desfiado, milho, queijo massa especial.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" >
+                <div class="card"  style= "background-color: #eff157;">
+                    <img src="images/cardapio-carne.avif" class="card-img-top" alt="Pastel 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Pastel de Carne</h5>
+                        <p class="card-text">Delicioso pastel recheado com Carne.</p>
+                        <button type="button" class="btn btn-danger" data-toggle="modal"
+                            data-target="#modalPastel3">Ver Mais</button>
+                        <p class="card-price mt-3">R$ 20,00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modalPastel3" tabindex="-1" role="dialog"
+                aria-labelledby="modalPastel3Label" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalPastel3Label">Pastel de Carne</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Ingredientes: Carne moida, temperos especiais.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 mb-4">
+                <div class="card" style= "background-color: #eff157;" >
+                    <img src="images/cardapio-pernil.avif" class="card-img-top" alt="Pastel 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Pastel de Pernil</h5>
+                        <p class="card-text">Delicioso pastel recheado com pernil.</p>
+                        <button type="button" class="btn btn-danger" data-toggle="modal"
+                            data-target="#modalPastel4">Ver Mais</button>
+                        <p class="card-price mt-3">R$ 20,00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="modalPastel4" tabindex="-1" role="dialog"
+                aria-labelledby="modalPastel4Label" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalPastel4Label">Pastel de Pernil</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Ingredientes: Carne de pernil, queijo,  temperos especiais.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="sobre" class="py-5 text-md-left bg-dark">
+    <div class="container">
+        <h2 class="mb-4" style="color: azure;">Sobre Nós</h2>
+        <div class="row">
+
+            <div class="col-md-6" style="color: azure;">
+                <p>
+                    A história da Pastelaria 'Do Zé' se entrelaça com a história de um dos bairros mais famosos de São Paulo, a nossa querida Lapa.
+                <p>
+                    A Pastelaria Do Zé foi inaugurada em meados dos anos 70, pelos primeiros proprietários que eram Maura Fricelli Nucci e Pascualino Nucci.
+                </p>
+                <p>
+                    Uma Pastelaria que não se cabe apenas na realização de pastéis, mas de muitos outros produtos que você pode conferir no nosso site ou vindo pessoalmente na Pastelaria Do Zé.
+                </p>
+                <p>
+                    Após décadas, nossa pastelaria é considerada a mais famosa da região Oeste de São Paulo, suas guloseimas são consideradas por todos como as melhores de São Paulo.
+                </p>
+            </div>
+
+            <div class="col-md-6">
+                <img src="images/microsoftteams-image-7-1e3d.jpg" alt="Imagem Sobre Nós" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <section id="contato" class="py-5"  style= "background-color: rgb(54, 54, 54);">
+        <div class="container">
+            <h2 class="text-center mb-4" style="color:azure;">Contato</h2>
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <form>
+                        <div class="form-group" style="color:azure;">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
+                        </div>
+                        <div class="form-group" style="color:azure;">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Digite seu email">
+                        </div>
+                        <div class="form-group" style="color:azure;">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea class="form-control" id="mensagem" rows="3"
+                                placeholder="Digite sua mensagem"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-danger ">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-light py-4">
+        <div class="container text-md-left">
+            <p>Pastelaria do seu Zé - Todos os direitos reservados &copy; 2024</p>
+            <p>Telefone: (XX) XXXX-XXXX</p>
+            <p>Endereço: Rua das Delícias, 123 - Cidade</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
